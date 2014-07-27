@@ -5,10 +5,15 @@ Columns in order
  subjectId        
  	Numeric
  	Unique identify of subject for the observation
+ 	Between 1 and 30.
  	
  activity                 
  	String
  	Text identifier of the activity for the observation
+ 	One of "LAYING","SITTING","STANDING","WALKING","WALKING_DOWNSTAIRS","WALKING_UPSTAIRS"
+ 	
+The remaining columns represent the average means and standard deviations across a given subjectId for all intances of the named activity. Where measurements are spatial, X, Y, and Z coordinates are listed seprately (with suffixes denoting the different coordinates). "mean" in the column name indicates the value is an average mean. "std" in the column name indicates the value is an average standard deviation.
+ 	
  	
  tBodyAcc.mean.X          
  	Numeric 
